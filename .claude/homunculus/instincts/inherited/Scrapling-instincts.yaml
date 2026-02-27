@@ -1,0 +1,693 @@
+# Instincts generated from https://github.com/skalingclouds/Scrapling
+# Generated: 2026-02-27T04:58:03.240Z
+# Version: 2.0
+
+---
+id: Scrapling-commit-conventional
+trigger: "when writing a commit message"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: https://github.com/skalingclouds/Scrapling
+---
+
+# Scrapling Commit Conventional
+
+## Action
+
+Use conventional commit format with prefixes: docs, fix, feat, test, ops
+
+## Evidence
+
+- 200 commits analyzed
+- Detected conventional commit pattern
+- Examples: ops: add the mcp server to the docker file, fix(stealth): improve stealth mode by removing unnecessary scripts
+
+---
+id: Scrapling-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/skalingclouds/Scrapling
+---
+
+# Scrapling Commit Length
+
+## Action
+
+Keep commit messages concise (under 50 characters)
+
+## Evidence
+
+- Average commit message length: 45 chars
+- Based on 200 commits
+
+---
+id: Scrapling-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/skalingclouds/Scrapling
+---
+
+# Scrapling Naming Files
+
+## Action
+
+Use snake_case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: snake_case
+
+---
+id: Scrapling-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/skalingclouds/Scrapling
+---
+
+# Scrapling Export Style
+
+## Action
+
+Prefer mixed exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: mixed
+
+---
+id: Scrapling-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/skalingclouds/Scrapling
+---
+
+# Scrapling Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: Scrapling-workflow-database-migration
+trigger: "when modifying the database schema or adding tables"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/skalingclouds/Scrapling
+---
+
+# Scrapling Workflow Database Migration
+
+## Action
+
+Follow the database-migration workflow:
+1. Create migration file
+2. Update schema definitions
+3. Generate/update types
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: 
+
+---
+id: Scrapling-workflow-feature-development
+trigger: "when implementing a new feature"
+confidence: 0.75
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/skalingclouds/Scrapling
+---
+
+# Scrapling Workflow Feature Development
+
+## Action
+
+Follow the feature-development workflow:
+1. Add feature implementation
+2. Add tests for feature
+3. Update documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~5x per month
+- Files: **/*.test.*
+
+---
+id: Scrapling-workflow-test-driven-development
+trigger: "when adding new functionality"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/skalingclouds/Scrapling
+---
+
+# Scrapling Workflow Test Driven Development
+
+## Action
+
+Follow the test-driven-development workflow:
+1. Write failing test
+2. Implement code to pass test
+3. Refactor if needed
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: **/*.test.*, **/*.spec.*, src/**/*
+
+---
+id: Scrapling-workflow-multilingual-documentation-update
+trigger: "when doing multilingual documentation update"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/skalingclouds/Scrapling
+---
+
+# Scrapling Workflow Multilingual Documentation Update
+
+## Action
+
+Follow the multilingual-documentation-update workflow:
+1. Update main README.md
+2. Update all docs/README_*.md files
+3. Update docs/index.md
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~8x per month
+- Files: README.md, docs/README_AR.md, docs/README_CN.md
+
+---
+id: Scrapling-workflow-version-release-preparation
+trigger: "when doing version release preparation"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/skalingclouds/Scrapling
+---
+
+# Scrapling Workflow Version Release Preparation
+
+## Action
+
+Follow the version-release-preparation workflow:
+1. Update version in pyproject.toml
+2. Update version in __init__.py
+3. Update setup.cfg
+4. Update documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: pyproject.toml, scrapling/__init__.py, setup.cfg
+
+---
+id: Scrapling-workflow-stealth-browser-enhancement
+trigger: "when doing stealth browser enhancement"
+confidence: 0.7
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/skalingclouds/Scrapling
+---
+
+# Scrapling Workflow Stealth Browser Enhancement
+
+## Action
+
+Follow the stealth-browser-enhancement workflow:
+1. Update stealth configuration
+2. Modify bypass scripts
+3. Update navigation logic
+4. Test changes
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~4x per month
+- Files: scrapling/engines/_browsers/_stealth.py, scrapling/engines/toolbelt/bypasses/*.js, scrapling/engines/toolbelt/navigation.py
+
+---
+id: Scrapling-workflow-github-actions-maintenance
+trigger: "when doing github actions maintenance"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/skalingclouds/Scrapling
+---
+
+# Scrapling Workflow Github Actions Maintenance
+
+## Action
+
+Follow the github-actions-maintenance workflow:
+1. Update workflow files
+2. Upgrade action versions
+3. Test compatibility
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: .github/workflows/code-quality.yml, .github/workflows/docker-build.yml, .github/workflows/release-and-publish.yml
+
+---
+id: Scrapling-workflow-mcp-server-development
+trigger: "when doing mcp server development"
+confidence: 0.75
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/skalingclouds/Scrapling
+---
+
+# Scrapling Workflow Mcp Server Development
+
+## Action
+
+Follow the mcp-server-development workflow:
+1. Update AI core functionality
+2. Modify MCP server configuration
+3. Update related documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~5x per month
+- Files: scrapling/core/ai.py, server.json, docs/ai/mcp-server.md
+
+---
+id: scrapling-snake-case-files
+trigger: "When creating new Python files"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: skalingclouds/Scrapling
+---
+
+# Scrapling Snake Case Files
+
+## Action
+
+Use snake_case naming convention
+
+## Evidence
+
+- Consistent snake_case in scrapling/ module structure
+- Files like _stealth.py, navigation.py follow pattern
+
+---
+id: scrapling-camel-case-functions
+trigger: "When defining function names"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: skalingclouds/Scrapling
+---
+
+# Scrapling Camel Case Functions
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Function naming convention detected in codeStyle analysis
+
+---
+id: scrapling-pascal-case-classes
+trigger: "When defining class names"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: skalingclouds/Scrapling
+---
+
+# Scrapling Pascal Case Classes
+
+## Action
+
+Use PascalCase naming convention
+
+## Evidence
+
+- Class naming convention detected in codeStyle analysis
+
+---
+id: scrapling-screaming-snake-constants
+trigger: "When defining constants"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: skalingclouds/Scrapling
+---
+
+# Scrapling Screaming Snake Constants
+
+## Action
+
+Use SCREAMING_SNAKE_CASE naming convention
+
+## Evidence
+
+- Constants naming convention detected in codeStyle analysis
+
+---
+id: scrapling-conventional-commits
+trigger: "When making commits"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: skalingclouds/Scrapling
+---
+
+# Scrapling Conventional Commits
+
+## Action
+
+Use conventional commit format with prefixes: docs, fix, feat, test, ops, build, style
+
+## Evidence
+
+- All commit examples follow conventional format
+- Consistent prefixes across 8 example commits
+
+---
+id: scrapling-commit-length-limit
+trigger: "When writing commit messages"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: skalingclouds/Scrapling
+---
+
+# Scrapling Commit Length Limit
+
+## Action
+
+Keep commit message around 45 characters average
+
+## Evidence
+
+- Average commit length is 45 characters
+- Examples range from 25-70 characters
+
+---
+id: scrapling-ops-prefix-infrastructure
+trigger: "When making infrastructure or deployment changes"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: skalingclouds/Scrapling
+---
+
+# Scrapling Ops Prefix Infrastructure
+
+## Action
+
+Use 'ops:' commit prefix
+
+## Evidence
+
+- ops: add the mcp server to the docker file
+- ops: pump mcp server version up
+
+---
+id: scrapling-fix-scope-stealth
+trigger: "When fixing stealth-related functionality"
+confidence: 0.8
+domain: git
+source: repo-analysis
+source_repo: skalingclouds/Scrapling
+---
+
+# Scrapling Fix Scope Stealth
+
+## Action
+
+Use 'fix(stealth):' commit prefix with scope
+
+## Evidence
+
+- fix(stealth): improve stealth mode by removing unnecessary scripts
+
+---
+id: scrapling-fix-scope-mcp
+trigger: "When fixing MCP-related functionality"
+confidence: 0.8
+domain: git
+source: repo-analysis
+source_repo: skalingclouds/Scrapling
+---
+
+# Scrapling Fix Scope Mcp
+
+## Action
+
+Use 'fix(mcp):' commit prefix with scope
+
+## Evidence
+
+- fix(mcp): make mcp use less tokens by striping useless tags
+
+---
+id: scrapling-test-separate-directory
+trigger: "When adding tests"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: skalingclouds/Scrapling
+---
+
+# Scrapling Test Separate Directory
+
+## Action
+
+Place tests in separate 'tests/' directory
+
+## Evidence
+
+- Architecture shows testLocation: separate
+- tests folder in commonFolders
+
+---
+id: scrapling-test-engine-pattern
+trigger: "When testing engine functionality"
+confidence: 0.75
+domain: testing
+source: repo-analysis
+source_repo: skalingclouds/Scrapling
+---
+
+# Scrapling Test Engine Pattern
+
+## Action
+
+Add tests following 'test: add tests for [component] engine' pattern
+
+## Evidence
+
+- test: add tests for spiders engine commit example
+
+---
+id: scrapling-multilingual-docs-sync
+trigger: "When updating main README.md"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: skalingclouds/Scrapling
+---
+
+# Scrapling Multilingual Docs Sync
+
+## Action
+
+Update all language variants: docs/README_AR.md, docs/README_CN.md, docs/README_DE.md, docs/README_ES.md, docs/README_JP.md, docs/README_RU.md, docs/index.md
+
+## Evidence
+
+- Multilingual documentation workflow with 8x/month frequency
+- Consistent pattern across language files
+
+---
+id: scrapling-version-release-sync
+trigger: "When releasing a new version"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: skalingclouds/Scrapling
+---
+
+# Scrapling Version Release Sync
+
+## Action
+
+Update version in pyproject.toml, scrapling/__init__.py, and setup.cfg simultaneously
+
+## Evidence
+
+- Version release workflow with specific file sequence
+- 3x/month frequency pattern
+
+---
+id: scrapling-stealth-enhancement-pattern
+trigger: "When improving anti-detection features"
+confidence: 0.88
+domain: workflow
+source: repo-analysis
+source_repo: skalingclouds/Scrapling
+---
+
+# Scrapling Stealth Enhancement Pattern
+
+## Action
+
+Update scrapling/engines/_browsers/_stealth.py, bypass scripts, and navigation logic together
+
+## Evidence
+
+- Stealth browser enhancement workflow
+- Files involved: _stealth.py, bypasses/*.js, navigation.py
+
+---
+id: scrapling-github-actions-batch-update
+trigger: "When updating CI/CD workflows"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: skalingclouds/Scrapling
+---
+
+# Scrapling Github Actions Batch Update
+
+## Action
+
+Update all workflow files: code-quality.yml, docker-build.yml, release-and-publish.yml, tests.yml
+
+## Evidence
+
+- GitHub Actions maintenance workflow
+- All 4 workflow files updated together
+
+---
+id: scrapling-mcp-server-coordination
+trigger: "When working on AI integration features"
+confidence: 0.82
+domain: workflow
+source: repo-analysis
+source_repo: skalingclouds/Scrapling
+---
+
+# Scrapling Mcp Server Coordination
+
+## Action
+
+Update scrapling/core/ai.py, server.json, and docs/ai/mcp-server.md together
+
+## Evidence
+
+- MCP server development workflow
+- 5x/month frequency with coordinated file updates
+
+---
+id: scrapling-docker-ops-pattern
+trigger: "When making Docker-related changes"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: skalingclouds/Scrapling
+---
+
+# Scrapling Docker Ops Pattern
+
+## Action
+
+Use 'ops:' prefix and update Dockerfile
+
+## Evidence
+
+- ops: add the mcp server to the docker file
+- Dockerfile in configFiles
+
+---
+id: scrapling-build-version-pump
+trigger: "When updating dependencies or versions"
+confidence: 0.75
+domain: git
+source: repo-analysis
+source_repo: skalingclouds/Scrapling
+---
+
+# Scrapling Build Version Pump
+
+## Action
+
+Use 'build:' prefix with 'pump' terminology
+
+## Evidence
+
+- build: pump version up and the deps
+- ops: pump mcp server version up
+
+---
+id: scrapling-single-package-structure
+trigger: "When organizing code architecture"
+confidence: 0.9
+domain: architecture
+source: repo-analysis
+source_repo: skalingclouds/Scrapling
+---
+
+# Scrapling Single Package Structure
+
+## Action
+
+Maintain single-package structure with scrapling/ as main module
+
+## Evidence
+
+- Architecture type: single-package
+- scrapling folder in commonFolders
+
+---
+id: scrapling-github-folder-structure
+trigger: "When setting up repository structure"
+confidence: 0.85
+domain: architecture
+source: repo-analysis
+source_repo: skalingclouds/Scrapling
+---
+
+# Scrapling Github Folder Structure
+
+## Action
+
+Include .github folder with workflows, issue templates
+
+## Evidence
+
+- .github in commonFolders
+- Multiple .github/workflows/ config files
+
